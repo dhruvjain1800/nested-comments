@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 
-const Comment = ({ text }) => {
-  const [comments, setComments] = useState<string[]>([]);
-  const [addingComment, setAddingComment] = useState(false);
-  const [inputText, setInputText] = useState("");
+const Comment = ({ text }: { text: string }) => {
+  const [comments, setComments] = React.useState<string[]>([]);
+  const [addingComment, setAddingComment] = React.useState(false);
+  const [inputText, setInputText] = React.useState("");
   return (
     <div className="ml-2">
       <div className="flex left-0">
@@ -58,9 +58,9 @@ const Comment = ({ text }) => {
 };
 
 export default function Post1() {
-  const [comments, setComments] = useState<string[]>([]);
-  const [addingComment, setAddingComment] = useState(false);
-  const [inputText, setInputText] = useState("");
+  const [comments, setComments] = React.useState<string[]>([]);
+  const [addingComment, setAddingComment] = React.useState(false);
+  const [inputText, setInputText] = React.useState("");
   return (
     <div className="flex-col">
       <p className="text-black">

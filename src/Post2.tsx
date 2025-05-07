@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 interface Comment {
   id: number;
@@ -13,8 +13,8 @@ const Comment = (props: {
   allComments: Comment[];
   onDelete: (arg: number) => void;
 }) => {
-  const [addingComment, setAddingComment] = useState(false);
-  const [inputText, setInputText] = useState("");
+  const [addingComment, setAddingComment] = React.useState(false);
+  const [inputText, setInputText] = React.useState("");
   const { text, id, children } = props.comment ?? {};
   const commentsObj = props.allComments.reduce((acc, comment) => {
     acc[comment.id] = comment;
@@ -85,9 +85,9 @@ const Comment = (props: {
 };
 
 export default function Post2() {
-  const [comments, setComments] = useState<Comment[]>([]);
-  const [addingComment, setAddingComment] = useState(false);
-  const [inputText, setInputText] = useState("");
+  const [comments, setComments] = React.useState<Comment[]>([]);
+  const [addingComment, setAddingComment] = React.useState(false);
+  const [inputText, setInputText] = React.useState("");
   const commentsObj = comments.reduce((acc, comment) => {
     acc[comment.id] = comment;
     return acc;
