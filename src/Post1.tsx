@@ -5,7 +5,7 @@ const Comment = ({ text }: { text: string }) => {
   const [addingComment, setAddingComment] = React.useState(false);
   const [inputText, setInputText] = React.useState("");
   return (
-    <div className="ml-2">
+    <div className="ml-1.5 border-1 border-black">
       <div className="flex left-0">
         <p className="text-black">{text}</p>
       </div>

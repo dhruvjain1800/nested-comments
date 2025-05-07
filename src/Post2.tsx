@@ -21,7 +21,7 @@ const Comment = (props: {
     return acc;
   }, {} as Record<number, Comment>);
   return (
-    <div className="ml-2">
+    <div className="ml-1.5 border-1 border-black">
       <div className="flex left-0">
         <p className="text-black">{text}</p>
       </div>
@@ -62,12 +62,12 @@ const Comment = (props: {
           >
             Reply
           </button>
-          <button
+          {/* <button
             className="h-8 !py-0 !bg-transparent text-black ml-0.5"
             onClick={() => props.onDelete(id)}
           >
             Delete
-          </button>
+          </button> */}
         </div>
       )}
       <div className="ml-12 flex-col">
